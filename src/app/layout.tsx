@@ -2,15 +2,25 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const gilroyRegular = localFont({
+  src: "./fonts/Gilroy-Regular.ttf",
+  variable: "--font-gilroy-regular",
+  weight: "100",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const gilroySemiBold = localFont({
+  src: "./fonts/Gilroy-SemiBold.ttf",
+  variable: "--font-gilroy-semiBold",
+  weight: "600",
+});
+const gilroyBold = localFont({
+  src: "./fonts/Gilroy-Bold.ttf",
+  variable: "--font-gilroy-bold",
+  weight: "700",
+});
+const gilroyMedium = localFont({
+  src: "./fonts/Gilroy-Medium.ttf",
+  variable: "--font-gilroy-medium",
+  weight: "900",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${gilroyRegular.variable} ${gilroySemiBold.variable} ${gilroyBold.variable} ${gilroyMedium.variable} antialiased`}
       >
         {children}
       </body>
