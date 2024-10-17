@@ -1,17 +1,18 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/y5vE8y_f_OM" target="_blank">
-      <img src="https://github.com/user-attachments/assets/eaaeb1f0-22da-46be-9e29-9bef70e0039d" alt="Project Banner">
+    <a href="https://youtu.be/PuOVqP_cjkE?feature=shared" target="_blank">
+      <img src="https://github.com/adrianhajdin/banking/assets/151519281/3c03519c-7ebd-4539-b598-49e63d1770b4" alt="Project Banner">
     </a>
   <br />
-
+  
   <div>
-    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=61DAFB" alt="next.js" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
     <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
   </div>
 
-  <h3 align="center">A Collaborative LiveDocs</h3>
+  <h3 align="center">A Fintech Bank Application</h3>
 
    <div align="center">
      Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
@@ -24,8 +25,8 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
-6. 🔗 [Links](#links)
+5. 🕸️ [Code Snippets to Copy](#snippets)
+6. 🔗 [Assets](#links)
 7. 🚀 [More](#more)
 
 ## 🚨 Tutorial
@@ -34,11 +35,11 @@ This repository contains the code corresponding to an in-depth tutorial availabl
 
 If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
 
-<a href="https://youtu.be/y5vE8y_f_OM" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+<a href="https://youtu.be/PuOVqP_cjkE?feature=shared" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Built with Next.js to handle the user interface, Liveblocks for real-time features and styled with TailwindCSS, LiveDocs is a clone of Goole Docs. The primary goal is to demonstrate the developer's skills in realtime enviroment that creates a lasting impact.
+Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users, and manages their finances altogether. 
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over **34k+** members. It's a place where people help each other out.
 
@@ -48,32 +49,34 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 - Next.js
 - TypeScript
-- Liveblocks
-- Lexical Editor
+- Appwrite
+- Plaid
+- Dwolla
+- React Hook Form
+- Zod
+- TailwindCSS
+- Chart.js
 - ShadCN
-- Tailwind CSS
 
 ## <a name="features">🔋 Features</a>
 
-👉 **Authentication**: User authentication using GitHub through NextAuth, ensuring secure sign-in/out and session management.
+👉 **Authentication**: An ultra-secure SSR authentication with proper validations and authorization
 
-👉 **Collaborative Text Editor**: Multiple users can edit the same document simultaneously with real-time updates.
+👉 **Connect Banks**: Integrates with Plaid for multiple bank account linking
 
-👉 **Documents Management**
-   - **Create Documents**: Users can create new documents, which are automatically saved and listed.
-   - **Delete Documents**: Users can delete documents they own.
-   - **Share Documents**: Users can share documents via email or link with view/edit permissions.
-   - **List Documents**: Display all documents owned or shared with the user, with search and sorting functionalities.
+👉 **Home Page**: Shows general overview of user account with total balance from all connected banks, recent transactions, money spent on different categories, etc
 
-👉 **Comments**: Users can add inline and general comments, with threading for discussions.
+👉 **My Banks**: Check the complete list of all connected banks with respective balances, account details
 
-👉 **Active Collaborators on Text Editor**: Show active collaborators with real-time presence indicators.
+👉 **Transaction History**: Includes pagination and filtering options for viewing transaction history of different banks
 
-👉 **Notifications**: Notify users of document shares, new comments, and collaborator activities.
+👉 **Real-time Updates**: Reflects changes across all relevant pages upon connecting new bank accounts.
 
-👉 **Responsive**: The application is responsive across all devices.
+👉 **Funds Transfer**: Allows users to transfer funds using Dwolla to other accounts with required fields and recipient bank ID.
 
-and many more, including code architecture and reusability 
+👉 **Responsiveness**: Ensures the application adapts seamlessly to various screen sizes and devices, providing a consistent user experience across desktop, tablet, and mobile platforms.
+
+and many more, including code architecture and reusability. 
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
@@ -90,8 +93,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/adrianhajdin/collaborative-editor.git
-cd collaborative-editor
+git clone https://github.com/adrianhajdin/banking.git
+cd banking
 ```
 
 **Installation**
@@ -107,18 +110,34 @@ npm install
 Create a new file named `.env` in the root of your project and add the following content:
 
 ```env
-#Clerk
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+#NEXT
+NEXT_PUBLIC_SITE_URL=
 
-#Liveblocks
-NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=
-LIVEBLOCKS_SECRET_KEY=
+#APPWRITE
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT=
+APPWRITE_DATABASE_ID=
+APPWRITE_USER_COLLECTION_ID=
+APPWRITE_BANK_COLLECTION_ID=
+APPWRITE_TRANSACTION_COLLECTION_ID=
+APPWRITE_SECRET=
+
+#PLAID
+PLAID_CLIENT_ID=
+PLAID_SECRET=
+PLAID_ENV=
+PLAID_PRODUCTS=
+PLAID_COUNTRY_CODES=
+
+#DWOLLA
+DWOLLA_KEY=
+DWOLLA_SECRET=
+DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
+DWOLLA_ENV=sandbox
+
 ```
 
-Replace the placeholder values with your actual Clerk & LiveBlocks credentials. You can obtain these credentials by signing up on the [Clerk](https://clerk.com/) and [Liveblocks](liveblocks.io/) website.
+Replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on the [Appwrite](https://appwrite.io/?utm_source=youtube&utm_content=reactnative&ref=JSmastery), [Plaid](https://plaid.com/) and [Dwolla](https://www.dwolla.com/)
 
 **Running the Project**
 
@@ -131,944 +150,838 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 ## <a name="snippets">🕸️ Snippets</a>
 
 <details>
-<summary><code>globals.css</code></summary>
+<summary><code>.env.example</code></summary>
 
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+```env
+#NEXT
+NEXT_PUBLIC_SITE_URL=
 
-/* @import "@liveblocks/react-ui/styles.css"; */
-/* @import "@liveblocks/react-lexical/styles.css"; */
+#APPWRITE
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT=
+APPWRITE_DATABASE_ID=
+APPWRITE_USER_COLLECTION_ID=
+APPWRITE_BANK_COLLECTION_ID=
+APPWRITE_TRANSACTION_COLLECTION_ID=
+APPWRITE_SECRET=
 
-/* @import "../styles/dark-theme.css"; */
+#PLAID
+PLAID_CLIENT_ID=
+PLAID_SECRET=
+PLAID_ENV=sandbox
+PLAID_PRODUCTS=auth,transactions,identity
+PLAID_COUNTRY_CODES=US,CA
 
-/* ========================================== TAILWIND STYLES */
-@layer base {
-  :root {
-    background: #09111f;
-    color: #fff;
-    margin: 0;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-    border-radius: 50px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: #09090a;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #2e3d5b;
-    border-radius: 50px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #7878a3;
-  }
-}
-
-@layer utilities {
-  .text-28-semibold {
-    @apply text-[28px] font-semibold;
-  }
-  .text-10-regular {
-    @apply text-[10px] font-normal;
-  }
-
-  .gradient-blue {
-    @apply bg-gradient-to-t from-blue-500 to-blue-400;
-  }
-  .gradient-red {
-    @apply bg-gradient-to-t from-red-500 to-red-400;
-  }
-
-  .shad-dialog {
-    @apply w-full max-w-[400px] rounded-xl border-none bg-doc bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
-  }
-
-  .shad-dialog button {
-    @apply focus:ring-0 focus:ring-offset-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
-  }
-
-  .shad-select {
-    @apply w-fit border-none bg-transparent text-blue-100 !important;
-  }
-
-  .shad-select svg {
-    @apply ml-1 mt-1;
-  }
-
-  .shad-select-item {
-    @apply cursor-pointer bg-dark-200 text-blue-100 focus:bg-dark-300 hover:bg-dark-300 focus:text-blue-100 !important;
-  }
-
-  .shad-popover {
-    @apply w-[460px] border-none bg-dark-200 shadow-lg !important;
-  }
-
-  .floating-toolbar {
-    @apply flex w-full min-w-max items-center justify-center gap-2 rounded-lg bg-dark-350 p-1.5 shadow-xl;
-  }
-
-  .floating-toolbar-btn {
-    @apply relative inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50;
-  }
-
-  .toolbar-wrapper {
-    @apply z-50 custom-scrollbar w-screen overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
-  }
-
-  .editor-wrapper {
-    @apply custom-scrollbar h-[calc(100vh-140px)] gap-5 overflow-auto px-5 pt-5 lg:flex-row lg:items-start lg:justify-center  xl:gap-10 xl:pt-10;
-  }
-
-  .header {
-    @apply min-h-[92px] min-w-full flex-nowrap bg-dark-100 flex w-full items-center justify-between gap-2 px-4;
-  }
-
-  .document-list-container {
-    @apply flex flex-col items-center mb-10 w-full gap-10 px-5;
-  }
-
-  .document-list-title {
-    @apply max-w-[730px] items-end flex w-full justify-between;
-  }
-
-  .document-list-item {
-    @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
-  }
-
-  .document-list-empty {
-    @apply flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg bg-dark-200 px-10 py-8;
-  }
-
-  .document-title-input {
-    @apply min-w-[78px] border-none bg-transparent px-0 text-left text-base font-semibold leading-[24px] focus-visible:ring-0 focus-visible:ring-offset-0 disabled:text-black sm:text-xl md:text-center !important;
-  }
-
-  .document-title {
-    @apply line-clamp-1 border-dark-400 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
-  }
-
-  .view-only-tag {
-    @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50;
-  }
-
-  .collaborators-list {
-    @apply hidden items-center justify-end -space-x-3 overflow-hidden sm:flex;
-  }
-
-  .share-input {
-    @apply h-11 flex-1 border-none bg-dark-400 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
-  }
-
-  .remove-btn {
-    @apply rounded-lg bg-transparent px-0 text-red-500 hover:bg-transparent;
-  }
-
-  .comments-container {
-    @apply mb-10 space-y-4 lg:w-fit flex w-full flex-col items-center justify-center;
-  }
-
-  .comment-composer {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
-  }
-
-  .comment-thread {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px] transition-all;
-  }
-
-  .loader {
-    @apply flex size-full h-screen items-center justify-center gap-3 text-white;
-  }
-
-  /* ======================== Auth Pages */
-  .auth-page {
-    @apply flex h-screen w-full flex-col items-center justify-center gap-10;
-  }
-
-  /* ======================== Home Page */
-  .home-container {
-    @apply relative flex min-h-screen w-full flex-col items-center gap-5 sm:gap-10;
-  }
-
-  .document-ul {
-    @apply flex w-full max-w-[730px] flex-col gap-5;
-  }
-
-  /* ======================== CollaborativeRoom */
-  .collaborative-room {
-    @apply flex size-full max-h-screen flex-1 flex-col items-center overflow-hidden;
-  }
-}
-
-/* ======================== Clerk Override */
-.cl-avatarBox {
-  width: 36px;
-  height: 36px;
-}
-
-.cl-userButtonTrigger {
-  height: fit-content !important;
-}
-
-.cl-cardBox,
-.cl-signIn-start,
-.cl-signUp-start,
-.cl-footer {
-  background: #060d18;
-  box-shadow: none;
-  padding: 20px;
-}
-
-.cl-socialButtonsBlockButton,
-.cl-socialButtonsBlockButton:hover {
-  height: 40px;
-  background-color: #3371ff;
-  color: #fff;
-}
-
-.cl-internal-2gzuzc {
-  filter: brightness(1000%);
-}
-
-.cl-logoBox {
-  height: 52px;
-}
-
-/* ======================== Liveblocks Override */
-.lb-root {
-  --lb-accent-subtle: #0b1527;
-  --lb-radius: 0px;
-  --lb-dynamic-background: #1b2840;
-}
-
-.lb-comment,
-.lb-thread-comments,
-.lb-composer,
-.lb-comment-reaction {
-  background-color: #0f1c34;
-  color: #fff;
-}
-
-.lb-button {
-  --lb-foreground-moderate: #fff;
-}
-
-.lb-button:where([data-variant="primary"]) {
-  background-color: #161e30;
-  color: #b4c6ee;
-  padding: 8px;
-}
-
-.lb-button:where(
-    [data-variant="default"]:not(
-        :is(
-            :enabled:hover,
-            :enabled:focus-visible,
-            [aria-expanded="true"],
-            [aria-selected="true"]
-          )
-      )
-  ) {
-  color: #b4c6ee;
-}
-
-.lb-button:where(
-    :enabled:hover,
-    :enabled:focus-visible,
-    [aria-expanded="true"],
-    [aria-selected="true"]
-  ) {
-  --lb-button-background: #161e30;
-
-  color: #b4c6ee;
-}
-
-.lb-inbox-notification-list-item:where(:not(:last-of-type)) {
-  border-bottom: none;
-}
-
-.lb-comment-body,
-.lb-dropdown-item,
-.lb-dropdown-item-icon,
-.lb-composer-editor {
-  color: #fff;
-}
-
-.lb-composer-action {
-  padding: 8px;
-}
-
-.lb-comment-content {
-  background: #0b1527;
-  margin-top: 16px;
-  padding: 12px;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.lb-comment-date,
-.lb-lexical-mention-suggestion-user,
-.lb-composer-suggestions-list-item,
-.lb-inbox-notification-date,
-.lb-comment-author {
-  color: #b4c6ee;
-}
-
-.data-liveblocks-portal {
-  color: #b4c6ee !important;
-}
-
-.lb-root:where(:not(.lb-root .lb-root)) {
-  --lb-dynamic-background: #1b2840;
-  color: #fff;
-}
-
-.lb-composer-editor :where([data-placeholder]) {
-  color: #b4c6ee;
-  font-size: 14px;
-}
-
-.lb-lexical-floating-threads-thread:where([data-resolved]) {
-  opacity: 40%;
-}
-
-.lb-elevation {
-  background: #0f1c34;
-}
+#DWOLLA
+DWOLLA_KEY=
+DWOLLA_SECRET=
+DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
+DWOLLA_ENV=sandbox
 ```
 
 </details>
 
 <details>
-<summary><code>tailwind.config.ts</code></summary>
+<summary><code>exchangePublicToken</code></summary>
 
 ```typescript
-import type { Config } from 'tailwindcss';
+// This function exchanges a public token for an access token and item ID
+export const exchangePublicToken = async ({
+  publicToken,
+  user,
+}: exchangePublicTokenProps) => {
+  try {
+    // Exchange public token for access token and item ID
+    const response = await plaidClient.itemPublicTokenExchange({
+      public_token: publicToken,
+    });
 
-const { fontFamily } = require('tailwindcss/defaultTheme');
+    const accessToken = response.data.access_token;
+    const itemId = response.data.item_id;
 
-const config = {
-  darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: '',
-  theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-        xs: '360px',
-      },
-    },
-    extend: {
-      colors: {
-        blue: {
-          100: '#B4C6EE',
-          400: '#417BFF',
-          500: '#3371FF',
-        },
-        red: {
-          400: '#DD4F56',
-          500: '#DC4349',
-        },
-        dark: {
-          100: '#09111F',
-          200: '#0B1527',
-          300: '#0F1C34',
-          350: '#12213B',
-          400: '#27344D',
-          500: '#2E3D5B',
-        },
-      },
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
-        },
-      },
-      backgroundImage: {
-        doc: 'url(/assets/images/doc.png)',
-        modal: 'url(/assets/images/modal.png)',
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-      },
-    },
-  },
-  plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+    // Get account information from Plaid using the access token
+    const accountsResponse = await plaidClient.accountsGet({
+      access_token: accessToken,
+    });
 
-export default config;
+    const accountData = accountsResponse.data.accounts[0];
+
+    // Create a processor token for Dwolla using the access token and account ID
+    const request: ProcessorTokenCreateRequest = {
+      access_token: accessToken,
+      account_id: accountData.account_id,
+      processor: "dwolla" as ProcessorTokenCreateRequestProcessorEnum,
+    };
+
+    const processorTokenResponse =
+      await plaidClient.processorTokenCreate(request);
+    const processorToken = processorTokenResponse.data.processor_token;
+
+    // Create a funding source URL for the account using the Dwolla customer ID, processor token, and bank name
+    const fundingSourceUrl = await addFundingSource({
+      dwollaCustomerId: user.dwollaCustomerId,
+      processorToken,
+      bankName: accountData.name,
+    });
+
+    // If the funding source URL is not created, throw an error
+    if (!fundingSourceUrl) throw Error;
+
+    // Create a bank account using the user ID, item ID, account ID, access token, funding source URL, and sharable ID
+    await createBankAccount({
+      userId: user.$id,
+      bankId: itemId,
+      accountId: accountData.account_id,
+      accessToken,
+      fundingSourceUrl,
+      sharableId: encryptId(accountData.account_id),
+    });
+
+    // Revalidate the path to reflect the changes
+    revalidatePath("/");
+
+    // Return a success message
+    return parseStringify({
+      publicTokenExchange: "complete",
+    });
+  } catch (error) {
+    // Log any errors that occur during the process
+    console.error("An error occurred while creating exchanging token:", error);
+  }
+};
 ```
 
 </details>
 
 <details>
-<summary><code>types/index.d.ts</code></summary>
+<summary><code>user.actions.ts</code></summary>
 
 ```typescript
-/* eslint-disable no-unused-vars */
-declare type SearchParamProps = {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+"use server";
 
-declare type AccessType = ["room:write"] | ["room:read", "room:presence:write"];
-
-declare type RoomAccesses = Record<string, AccessType>;
-
-declare type UserType = "creator" | "editor" | "viewer";
-
-declare type RoomMetadata = {
-  creatorId: string;
-  email: string;
-  title: string;
-};
-
-declare type CreateDocumentParams = {
-  userId: string;
-  email: string;
-};
-
-declare type User = {
-  id: string;
-  name: string;
-  email: string;
-  avatar: string;
-  color: string;
-  userType?: UserType;
-};
-
-declare type ShareDocumentParams = {
-  roomId: string;
-  email: string;
-  userType: UserType;
-  updatedBy: User;
-};
-
-declare type UserTypeSelectorParams = {
-  userType: string;
-  setUserType: React.Dispatch<React.SetStateAction<UserType>>;
-  onClickHandler?: (value: string) => void;
-};
-
-declare type ShareDocumentDialogProps = {
-  roomId: string;
-  collaborators: User[];
-  creatorId: string;
-  currentUserType: UserType;
-};
-
-declare type HeaderProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
-declare type CollaboratorProps = {
-  roomId: string;
-  email: string;
-  creatorId: string;
-  collaborator: User;
-  user: User;
-};
-
-declare type CollaborativeRoomProps = {
-  roomId: string;
-  roomMetadata: RoomMetadata;
-  users: User[];
-  currentUserType: UserType;
-};
-
-declare type AddDocumentBtnProps = {
-  userId: string;
-  email: string;
-};
-
-declare type DeleteModalProps = { roomId: string };
-
-declare type ThreadWrapperProps = { thread: ThreadData<BaseMetadata> };
-```
-
-</details>
-
-<details>
-<summary><code>lib/utils.ts</code></summary>
-
-```typescript
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
-
-export const parseStringify = (value: any) => JSON.parse(JSON.stringify(value));
-
-export const getAccessType = (userType: UserType) => {
-  switch (userType) {
-    case 'creator':
-      return ['room:write'];
-    case 'editor':
-      return ['room:write'];
-    case 'viewer':
-      return ['room:read', 'room:presence:write'];
-    default:
-      return ['room:read', 'room:presence:write'];
-  }
-};
-
-export const dateConverter = (timestamp: string): string => {
-  const timestampNum = Math.round(new Date(timestamp).getTime() / 1000);
-  const date: Date = new Date(timestampNum * 1000);
-  const now: Date = new Date();
-
-  const diff: number = now.getTime() - date.getTime();
-  const diffInSeconds: number = diff / 1000;
-  const diffInMinutes: number = diffInSeconds / 60;
-  const diffInHours: number = diffInMinutes / 60;
-  const diffInDays: number = diffInHours / 24;
-
-  switch (true) {
-    case diffInDays > 7:
-      return `${Math.floor(diffInDays / 7)} weeks ago`;
-    case diffInDays >= 1 && diffInDays <= 7:
-      return `${Math.floor(diffInDays)} days ago`;
-    case diffInHours >= 1:
-      return `${Math.floor(diffInHours)} hours ago`;
-    case diffInMinutes >= 1:
-      return `${Math.floor(diffInMinutes)} minutes ago`;
-    default:
-      return 'Just now';
-  }
-};
-
-// Function to generate a random color in hex format, excluding specified colors
-export function getRandomColor() {
-  const avoidColors = ['#000000', '#FFFFFF', '#8B4513']; // Black, White, Brown in hex format
-
-  let randomColor;
-  do {
-    // Generate random RGB values
-    const r = Math.floor(Math.random() * 256); // Random number between 0-255
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-
-    // Convert RGB to hex format
-    randomColor = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
-  } while (avoidColors.includes(randomColor));
-
-  return randomColor;
-}
-
-export const brightColors = [
-  '#2E8B57', // Darker Neon Green
-  '#FF6EB4', // Darker Neon Pink
-  '#00CDCD', // Darker Cyan
-  '#FF00FF', // Darker Neon Magenta
-  '#FF007F', // Darker Bright Pink
-  '#FFD700', // Darker Neon Yellow
-  '#00CED1', // Darker Neon Mint Green
-  '#FF1493', // Darker Neon Red
-  '#00CED1', // Darker Bright Aqua
-  '#FF7F50', // Darker Neon Coral
-  '#9ACD32', // Darker Neon Lime
-  '#FFA500', // Darker Neon Orange
-  '#32CD32', // Darker Neon Chartreuse
-  '#ADFF2F', // Darker Neon Yellow Green
-  '#DB7093', // Darker Neon Fuchsia
-  '#00FF7F', // Darker Spring Green
-  '#FFD700', // Darker Electric Lime
-  '#FF007F', // Darker Bright Magenta
-  '#FF6347', // Darker Neon Vermilion
-];
-
-export function getUserColor(userId: string) {
-  let sum = 0;
-  for (let i = 0; i < userId.length; i++) {
-    sum += userId.charCodeAt(i);
-  }
-
-  const colorIndex = sum % brightColors.length;
-  return brightColors[colorIndex];
-}
-```
-
-</details>
-
-<details>
-<summary><code>components/editor/plugins/FloatingToolbar.tsx</code></summary>
-
-```typescript
+import { revalidatePath } from "next/cache";
+import { cookies } from "next/headers";
+import { ID, Query } from "node-appwrite";
 import {
-  autoUpdate,
-  flip,
-  hide,
-  limitShift,
-  offset,
-  shift,
-  size,
-  useFloating,
-} from '@floating-ui/react-dom';
-import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
-import { OPEN_FLOATING_COMPOSER_COMMAND } from '@liveblocks/react-lexical';
-import type { LexicalEditor, LexicalNode } from 'lexical';
-import { $getSelection, $isRangeSelection, $isTextNode } from 'lexical';
-import Image from 'next/image';
-import { useEffect, useLayoutEffect, useState } from 'react';
-import * as React from 'react';
-import { createPortal } from 'react-dom';
+  CountryCode,
+  ProcessorTokenCreateRequest,
+  ProcessorTokenCreateRequestProcessorEnum,
+  Products,
+} from "plaid";
 
-export default function FloatingToolbar() {
-  const [editor] = useLexicalComposerContext();
+import { plaidClient } from "@/lib/plaid.config";
+import {
+  parseStringify,
+  extractCustomerIdFromUrl,
+  encryptId,
+} from "@/lib/utils";
 
-  const [range, setRange] = useState<Range | null>(null);
+import { createAdminClient, createSessionClient } from "../appwrite.config";
 
-  useEffect(() => {
-    editor.registerUpdateListener(({ tags }) => {
-      return editor.getEditorState().read(() => {
-        // Ignore selection updates related to collaboration
-        if (tags.has('collaboration')) return;
+import { addFundingSource, createDwollaCustomer } from "./dwolla.actions";
 
-        const selection = $getSelection();
-        if (!$isRangeSelection(selection) || selection.isCollapsed()) {
-          setRange(null);
-          return;
-        }
+const {
+  APPWRITE_DATABASE_ID: DATABASE_ID,
+  APPWRITE_USER_COLLECTION_ID: USER_COLLECTION_ID,
+  APPWRITE_BANK_COLLECTION_ID: BANK_COLLECTION_ID,
+} = process.env;
 
-        const { anchor, focus } = selection;
-
-        const range = createDOMRange(
-          editor,
-          anchor.getNode(),
-          anchor.offset,
-          focus.getNode(),
-          focus.offset,
-        );
-
-        setRange(range);
-      });
-    });
-  }, [editor]);
-
-  if (range === null) return null;
-
-  return (
-    <Toolbar range={range} onRangeChange={setRange} container={document.body} />
-  );
-}
-
-function Toolbar({
-  range,
-  onRangeChange,
-  container,
-}: {
-  range: Range;
-  onRangeChange: (range: Range | null) => void;
-  container: HTMLElement;
-}) {
-  const [editor] = useLexicalComposerContext();
-
-  const padding = 20;
-
-  const {
-    refs: { setReference, setFloating },
-    strategy,
-    x,
-    y,
-  } = useFloating({
-    strategy: 'fixed',
-    placement: 'bottom',
-    middleware: [
-      flip({ padding, crossAxis: false }),
-      offset(10),
-      hide({ padding }),
-      shift({ padding, limiter: limitShift() }),
-      size({ padding }),
-    ],
-    whileElementsMounted: (...args) => {
-      return autoUpdate(...args, {
-        animationFrame: true,
-      });
-    },
-  });
-
-  useLayoutEffect(() => {
-    setReference({
-      getBoundingClientRect: () => range.getBoundingClientRect(),
-    });
-  }, [setReference, range]);
-
-  return createPortal(
-    <div
-      ref={setFloating}
-      style={{
-        position: strategy,
-        top: 0,
-        left: 0,
-        transform: `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0)`,
-        minWidth: 'max-content',
-      }}
-    >
-      <div className="floating-toolbar">
-        <button
-          onClick={() => {
-            const isOpen = editor.dispatchCommand(
-              OPEN_FLOATING_COMPOSER_COMMAND,
-              undefined,
-            );
-            if (isOpen) {
-              onRangeChange(null);
-            }
-          }}
-          className="floating-toolbar-btn"
-        >
-          <Image
-            src="/assets/icons/comment.svg"
-            alt="comment"
-            width={24}
-            height={24}
-          />
-        </button>
-      </div>
-    </div>,
-    container,
-  );
-}
-
-/**
- * MIT License
- * Copyright (c) Meta Platforms, Inc. and affiliates.
-
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
-function getDOMTextNode(element: Node | null): Text | null {
-  let node = element;
-
-  while (node !== null) {
-    if (node.nodeType === Node.TEXT_NODE) {
-      return node as Text;
-    }
-
-    node = node.firstChild;
-  }
-
-  return null;
-}
-
-function getDOMIndexWithinParent(node: ChildNode): [ParentNode, number] {
-  const parent = node.parentNode;
-
-  if (parent === null) {
-    throw new Error('Should never happen');
-  }
-
-  return [parent, Array.from(parent.childNodes).indexOf(node)];
-}
-
-/**
- * Creates a selection range for the DOM.
- * @param editor - The lexical editor.
- * @param anchorNode - The anchor node of a selection.
- * @param _anchorOffset - The amount of space offset from the anchor to the focus.
- * @param focusNode - The current focus.
- * @param _focusOffset - The amount of space offset from the focus to the anchor.
- * @returns The range of selection for the DOM that was created.
- */
-export function createDOMRange(
-  editor: LexicalEditor,
-  anchorNode: LexicalNode,
-  _anchorOffset: number,
-  focusNode: LexicalNode,
-  _focusOffset: number,
-): Range | null {
-  const anchorKey = anchorNode.getKey();
-  const focusKey = focusNode.getKey();
-  const range = document.createRange();
-  let anchorDOM: Node | Text | null = editor.getElementByKey(anchorKey);
-  let focusDOM: Node | Text | null = editor.getElementByKey(focusKey);
-  let anchorOffset = _anchorOffset;
-  let focusOffset = _focusOffset;
-
-  if ($isTextNode(anchorNode)) {
-    anchorDOM = getDOMTextNode(anchorDOM);
-  }
-
-  if ($isTextNode(focusNode)) {
-    focusDOM = getDOMTextNode(focusDOM);
-  }
-
-  if (
-    anchorNode === undefined ||
-    focusNode === undefined ||
-    anchorDOM === null ||
-    focusDOM === null
-  ) {
-    return null;
-  }
-
-  if (anchorDOM.nodeName === 'BR') {
-    [anchorDOM, anchorOffset] = getDOMIndexWithinParent(anchorDOM as ChildNode);
-  }
-
-  if (focusDOM.nodeName === 'BR') {
-    [focusDOM, focusOffset] = getDOMIndexWithinParent(focusDOM as ChildNode);
-  }
-
-  const firstChild = anchorDOM.firstChild;
-
-  if (
-    anchorDOM === focusDOM &&
-    firstChild !== null &&
-    firstChild.nodeName === 'BR' &&
-    anchorOffset === 0 &&
-    focusOffset === 0
-  ) {
-    focusOffset = 1;
-  }
+export const signUp = async ({ password, ...userData }: SignUpParams) => {
+  let newUserAccount;
 
   try {
-    range.setStart(anchorDOM, anchorOffset);
-    range.setEnd(focusDOM, focusOffset);
-  } catch (e) {
+    // create appwrite user
+    const { database, account } = await createAdminClient();
+    newUserAccount = await account.create(
+      ID.unique(),
+      userData.email,
+      password,
+      `${userData.firstName} ${userData.lastName}`
+    );
+
+    if (!newUserAccount) throw new Error("Error creating user");
+
+    // create dwolla customer
+    const dwollaCustomerUrl = await createDwollaCustomer({
+      ...userData,
+      type: "personal",
+    });
+
+    if (!dwollaCustomerUrl) throw new Error("Error creating dwolla customer");
+    const dwollaCustomerId = extractCustomerIdFromUrl(dwollaCustomerUrl);
+
+    const newUser = await database.createDocument(
+      DATABASE_ID!,
+      USER_COLLECTION_ID!,
+      ID.unique(),
+      {
+        ...userData,
+        userId: newUserAccount.$id,
+        dwollaCustomerUrl,
+        dwollaCustomerId,
+      }
+    );
+
+    const session = await account.createEmailPasswordSession(
+      userData.email,
+      password
+    );
+
+    cookies().set("appwrite-session", session.secret, {
+      path: "/",
+      httpOnly: true,
+      sameSite: "strict",
+      secure: true,
+    });
+
+    return parseStringify(newUser);
+  } catch (error) {
+    console.error("Error", error);
+
+    // check if account has been created, if so, delete it
+    if (newUserAccount?.$id) {
+      const { user } = await createAdminClient();
+      await user.delete(newUserAccount?.$id);
+    }
+
     return null;
   }
+};
 
-  if (
-    range.collapsed &&
-    (anchorOffset !== focusOffset || anchorKey !== focusKey)
-  ) {
-    // Range is backwards, we need to reverse it
-    range.setStart(focusDOM, focusOffset);
-    range.setEnd(anchorDOM, anchorOffset);
+export const signIn = async ({ email, password }: signInProps) => {
+  try {
+    const { account } = await createAdminClient();
+    const session = await account.createEmailPasswordSession(email, password);
+
+    cookies().set("appwrite-session", session.secret, {
+      path: "/",
+      httpOnly: true,
+      sameSite: "strict",
+      secure: true,
+    });
+
+    const user = await getUserInfo({ userId: session.userId });
+
+    return parseStringify(user);
+  } catch (error) {
+    console.error("Error", error);
+    return null;
   }
+};
 
-  return range;
-}
+export const getLoggedInUser = async () => {
+  try {
+    const { account } = await createSessionClient();
+    const result = await account.get();
+
+    const user = await getUserInfo({ userId: result.$id });
+
+    return parseStringify(user);
+  } catch (error) {
+    console.error("Error", error);
+    return null;
+  }
+};
+
+// CREATE PLAID LINK TOKEN
+export const createLinkToken = async (user: User) => {
+  try {
+    const tokeParams = {
+      user: {
+        client_user_id: user.$id,
+      },
+      client_name: user.firstName + user.lastName,
+      products: ["auth"] as Products[],
+      language: "en",
+      country_codes: ["US"] as CountryCode[],
+    };
+
+    const response = await plaidClient.linkTokenCreate(tokeParams);
+
+    return parseStringify({ linkToken: response.data.link_token });
+  } catch (error) {
+    console.error(
+      "An error occurred while creating a new Horizon user:",
+      error
+    );
+  }
+};
+
+// EXCHANGE PLAID PUBLIC TOKEN
+// This function exchanges a public token for an access token and item ID
+export const exchangePublicToken = async ({
+  publicToken,
+  user,
+}: exchangePublicTokenProps) => {
+  try {
+    // Exchange public token for access token and item ID
+    const response = await plaidClient.itemPublicTokenExchange({
+      public_token: publicToken,
+    });
+
+    const accessToken = response.data.access_token;
+    const itemId = response.data.item_id;
+
+    // Get account information from Plaid using the access token
+    const accountsResponse = await plaidClient.accountsGet({
+      access_token: accessToken,
+    });
+
+    const accountData = accountsResponse.data.accounts[0];
+
+    // Create a processor token for Dwolla using the access token and account ID
+    const request: ProcessorTokenCreateRequest = {
+      access_token: accessToken,
+      account_id: accountData.account_id,
+      processor: "dwolla" as ProcessorTokenCreateRequestProcessorEnum,
+    };
+
+    const processorTokenResponse =
+      await plaidClient.processorTokenCreate(request);
+    const processorToken = processorTokenResponse.data.processor_token;
+
+    // Create a funding source URL for the account using the Dwolla customer ID, processor token, and bank name
+    const fundingSourceUrl = await addFundingSource({
+      dwollaCustomerId: user.dwollaCustomerId,
+      processorToken,
+      bankName: accountData.name,
+    });
+
+    // If the funding source URL is not created, throw an error
+    if (!fundingSourceUrl) throw Error;
+
+    // Create a bank account using the user ID, item ID, account ID, access token, funding source URL, and sharable ID
+    await createBankAccount({
+      userId: user.$id,
+      bankId: itemId,
+      accountId: accountData.account_id,
+      accessToken,
+      fundingSourceUrl,
+      sharableId: encryptId(accountData.account_id),
+    });
+
+    // Revalidate the path to reflect the changes
+    revalidatePath("/");
+
+    // Return a success message
+    return parseStringify({
+      publicTokenExchange: "complete",
+    });
+  } catch (error) {
+    // Log any errors that occur during the process
+    console.error("An error occurred while creating exchanging token:", error);
+  }
+};
+
+export const getUserInfo = async ({ userId }: getUserInfoProps) => {
+  try {
+    const { database } = await createAdminClient();
+
+    const user = await database.listDocuments(
+      DATABASE_ID!,
+      USER_COLLECTION_ID!,
+      [Query.equal("userId", [userId])]
+    );
+
+    if (user.total !== 1) return null;
+
+    return parseStringify(user.documents[0]);
+  } catch (error) {
+    console.error("Error", error);
+    return null;
+  }
+};
+
+export const createBankAccount = async ({
+  accessToken,
+  userId,
+  accountId,
+  bankId,
+  fundingSourceUrl,
+  sharableId,
+}: createBankAccountProps) => {
+  try {
+    const { database } = await createAdminClient();
+
+    const bankAccount = await database.createDocument(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      ID.unique(),
+      {
+        accessToken,
+        userId,
+        accountId,
+        bankId,
+        fundingSourceUrl,
+        sharableId,
+      }
+    );
+
+    return parseStringify(bankAccount);
+  } catch (error) {
+    console.error("Error", error);
+    return null;
+  }
+};
+
+// get user bank accounts
+export const getBanks = async ({ userId }: getBanksProps) => {
+  try {
+    const { database } = await createAdminClient();
+
+    const banks = await database.listDocuments(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      [Query.equal("userId", [userId])]
+    );
+
+    return parseStringify(banks.documents);
+  } catch (error) {
+    console.error("Error", error);
+    return null;
+  }
+};
+
+// get specific bank from bank collection by document id
+export const getBank = async ({ documentId }: getBankProps) => {
+  try {
+    const { database } = await createAdminClient();
+
+    const bank = await database.listDocuments(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      [Query.equal("$id", [documentId])]
+    );
+
+    if (bank.total !== 1) return null;
+
+    return parseStringify(bank.documents[0]);
+  } catch (error) {
+    console.error("Error", error);
+    return null;
+  }
+};
+
+// get specific bank from bank collection by account id
+export const getBankByAccountId = async ({
+  accountId,
+}: getBankByAccountIdProps) => {
+  try {
+    const { database } = await createAdminClient();
+
+    const bank = await database.listDocuments(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      [Query.equal("accountId", [accountId])]
+    );
+
+    if (bank.total !== 1) return null;
+
+    return parseStringify(bank.documents[0]);
+  } catch (error) {
+    console.error("Error", error);
+    return null;
+  }
+};
+```
+  
+</details>
+
+<details>
+<summary><code>dwolla.actions.ts</code></summary>
+
+```typescript
+"use server";
+
+import { Client } from "dwolla-v2";
+
+const getEnvironment = (): "production" | "sandbox" => {
+  const environment = process.env.DWOLLA_ENV as string;
+
+  switch (environment) {
+    case "sandbox":
+      return "sandbox";
+    case "production":
+      return "production";
+    default:
+      throw new Error(
+        "Dwolla environment should either be set to `sandbox` or `production`"
+      );
+  }
+};
+
+const dwollaClient = new Client({
+  environment: getEnvironment(),
+  key: process.env.DWOLLA_KEY as string,
+  secret: process.env.DWOLLA_SECRET as string,
+});
+
+// Create a Dwolla Funding Source using a Plaid Processor Token
+export const createFundingSource = async (
+  options: CreateFundingSourceOptions
+) => {
+  try {
+    return await dwollaClient
+      .post(`customers/${options.customerId}/funding-sources`, {
+        name: options.fundingSourceName,
+        plaidToken: options.plaidToken,
+      })
+      .then((res) => res.headers.get("location"));
+  } catch (err) {
+    console.error("Creating a Funding Source Failed: ", err);
+  }
+};
+
+export const createOnDemandAuthorization = async () => {
+  try {
+    const onDemandAuthorization = await dwollaClient.post(
+      "on-demand-authorizations"
+    );
+    const authLink = onDemandAuthorization.body._links;
+    return authLink;
+  } catch (err) {
+    console.error("Creating an On Demand Authorization Failed: ", err);
+  }
+};
+
+export const createDwollaCustomer = async (
+  newCustomer: NewDwollaCustomerParams
+) => {
+  try {
+    return await dwollaClient
+      .post("customers", newCustomer)
+      .then((res) => res.headers.get("location"));
+  } catch (err) {
+    console.error("Creating a Dwolla Customer Failed: ", err);
+  }
+};
+
+export const createTransfer = async ({
+  sourceFundingSourceUrl,
+  destinationFundingSourceUrl,
+  amount,
+}: TransferParams) => {
+  try {
+    const requestBody = {
+      _links: {
+        source: {
+          href: sourceFundingSourceUrl,
+        },
+        destination: {
+          href: destinationFundingSourceUrl,
+        },
+      },
+      amount: {
+        currency: "USD",
+        value: amount,
+      },
+    };
+    return await dwollaClient
+      .post("transfers", requestBody)
+      .then((res) => res.headers.get("location"));
+  } catch (err) {
+    console.error("Transfer fund failed: ", err);
+  }
+};
+
+export const addFundingSource = async ({
+  dwollaCustomerId,
+  processorToken,
+  bankName,
+}: AddFundingSourceParams) => {
+  try {
+    // create dwolla auth link
+    const dwollaAuthLinks = await createOnDemandAuthorization();
+
+    // add funding source to the dwolla customer & get the funding source url
+    const fundingSourceOptions = {
+      customerId: dwollaCustomerId,
+      fundingSourceName: bankName,
+      plaidToken: processorToken,
+      _links: dwollaAuthLinks,
+    };
+    return await createFundingSource(fundingSourceOptions);
+  } catch (err) {
+    console.error("Transfer fund failed: ", err);
+  }
+};
 ```
 
 </details>
 
 <details>
-<summary><code>components/DeleteModal.tsx</code></summary>
+<summary><code>bank.actions.ts</code></summary>
+
+```typescript
+"use server";
+
+import {
+  ACHClass,
+  CountryCode,
+  TransferAuthorizationCreateRequest,
+  TransferCreateRequest,
+  TransferNetwork,
+  TransferType,
+} from "plaid";
+
+import { plaidClient } from "../plaid.config";
+import { parseStringify } from "../utils";
+
+import { getTransactionsByBankId } from "./transaction.actions";
+import { getBanks, getBank } from "./user.actions";
+
+// Get multiple bank accounts
+export const getAccounts = async ({ userId }: getAccountsProps) => {
+  try {
+    // get banks from db
+    const banks = await getBanks({ userId });
+
+    const accounts = await Promise.all(
+      banks?.map(async (bank: Bank) => {
+        // get each account info from plaid
+        const accountsResponse = await plaidClient.accountsGet({
+          access_token: bank.accessToken,
+        });
+        const accountData = accountsResponse.data.accounts[0];
+
+        // get institution info from plaid
+        const institution = await getInstitution({
+          institutionId: accountsResponse.data.item.institution_id!,
+        });
+
+        const account = {
+          id: accountData.account_id,
+          availableBalance: accountData.balances.available!,
+          currentBalance: accountData.balances.current!,
+          institutionId: institution.institution_id,
+          name: accountData.name,
+          officialName: accountData.official_name,
+          mask: accountData.mask!,
+          type: accountData.type as string,
+          subtype: accountData.subtype! as string,
+          appwriteItemId: bank.$id,
+          sharableId: bank.sharableId,
+        };
+
+        return account;
+      })
+    );
+
+    const totalBanks = accounts.length;
+    const totalCurrentBalance = accounts.reduce((total, account) => {
+      return total + account.currentBalance;
+    }, 0);
+
+    return parseStringify({ data: accounts, totalBanks, totalCurrentBalance });
+  } catch (error) {
+    console.error("An error occurred while getting the accounts:", error);
+  }
+};
+
+// Get one bank account
+export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
+  try {
+    // get bank from db
+    const bank = await getBank({ documentId: appwriteItemId });
+
+    // get account info from plaid
+    const accountsResponse = await plaidClient.accountsGet({
+      access_token: bank.accessToken,
+    });
+    const accountData = accountsResponse.data.accounts[0];
+
+    // get transfer transactions from appwrite
+    const transferTransactionsData = await getTransactionsByBankId({
+      bankId: bank.$id,
+    });
+
+    const transferTransactions = transferTransactionsData.documents.map(
+      (transferData: Transaction) => ({
+        id: transferData.$id,
+        name: transferData.name!,
+        amount: transferData.amount!,
+        date: transferData.$createdAt,
+        paymentChannel: transferData.channel,
+        category: transferData.category,
+        type: transferData.senderBankId === bank.$id ? "debit" : "credit",
+      })
+    );
+
+    // get institution info from plaid
+    const institution = await getInstitution({
+      institutionId: accountsResponse.data.item.institution_id!,
+    });
+
+    const transactions = await getTransactions({
+      accessToken: bank?.accessToken,
+    });
+
+    const account = {
+      id: accountData.account_id,
+      availableBalance: accountData.balances.available!,
+      currentBalance: accountData.balances.current!,
+      institutionId: institution.institution_id,
+      name: accountData.name,
+      officialName: accountData.official_name,
+      mask: accountData.mask!,
+      type: accountData.type as string,
+      subtype: accountData.subtype! as string,
+      appwriteItemId: bank.$id,
+    };
+
+    // sort transactions by date such that the most recent transaction is first
+    const allTransactions = [...transactions, ...transferTransactions].sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+
+    return parseStringify({
+      data: account,
+      transactions: allTransactions,
+    });
+  } catch (error) {
+    console.error("An error occurred while getting the account:", error);
+  }
+};
+
+// Get bank info
+export const getInstitution = async ({
+  institutionId,
+}: getInstitutionProps) => {
+  try {
+    const institutionResponse = await plaidClient.institutionsGetById({
+      institution_id: institutionId,
+      country_codes: ["US"] as CountryCode[],
+    });
+
+    const intitution = institutionResponse.data.institution;
+
+    return parseStringify(intitution);
+  } catch (error) {
+    console.error("An error occurred while getting the accounts:", error);
+  }
+};
+
+// Get transactions
+export const getTransactions = async ({
+  accessToken,
+}: getTransactionsProps) => {
+  let hasMore = true;
+  let transactions: any = [];
+
+  try {
+    // Iterate through each page of new transaction updates for item
+    while (hasMore) {
+      const response = await plaidClient.transactionsSync({
+        access_token: accessToken,
+      });
+
+      const data = response.data;
+
+      transactions = response.data.added.map((transaction) => ({
+        id: transaction.transaction_id,
+        name: transaction.name,
+        paymentChannel: transaction.payment_channel,
+        type: transaction.payment_channel,
+        accountId: transaction.account_id,
+        amount: transaction.amount,
+        pending: transaction.pending,
+        category: transaction.category ? transaction.category[0] : "",
+        date: transaction.date,
+        image: transaction.logo_url,
+      }));
+
+      hasMore = data.has_more;
+    }
+
+    return parseStringify(transactions);
+  } catch (error) {
+    console.error("An error occurred while getting the accounts:", error);
+  }
+};
+
+// Create Transfer
+export const createTransfer = async () => {
+  const transferAuthRequest: TransferAuthorizationCreateRequest = {
+    access_token: "access-sandbox-cddd20c1-5ba8-4193-89f9-3a0b91034c25",
+    account_id: "Zl8GWV1jqdTgjoKnxQn1HBxxVBanm5FxZpnQk",
+    funding_account_id: "442d857f-fe69-4de2-a550-0c19dc4af467",
+    type: "credit" as TransferType,
+    network: "ach" as TransferNetwork,
+    amount: "10.00",
+    ach_class: "ppd" as ACHClass,
+    user: {
+      legal_name: "Anne Charleston",
+    },
+  };
+  try {
+    const transferAuthResponse =
+      await plaidClient.transferAuthorizationCreate(transferAuthRequest);
+    const authorizationId = transferAuthResponse.data.authorization.id;
+
+    const transferCreateRequest: TransferCreateRequest = {
+      access_token: "access-sandbox-cddd20c1-5ba8-4193-89f9-3a0b91034c25",
+      account_id: "Zl8GWV1jqdTgjoKnxQn1HBxxVBanm5FxZpnQk",
+      description: "payment",
+      authorization_id: authorizationId,
+    };
+
+    const responseCreateResponse = await plaidClient.transferCreate(
+      transferCreateRequest
+    );
+
+    const transfer = responseCreateResponse.data.transfer;
+    return parseStringify(transfer);
+  } catch (error) {
+    console.error(
+      "An error occurred while creating transfer authorization:",
+      error
+    );
+  }
+};
+```
+
+</details>
+
+
+<details>
+<summary><code>BankTabItem.tsx</code></summary>
 
 ```typescript
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 
-import { deleteDocument } from "@/lib/actions/room.actions";
+import { cn, formUrlQuery } from "@/lib/utils";
 
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+export const BankTabItem = ({ account, appwriteItemId }: BankTabItemProps) => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const isActive = appwriteItemId === account?.appwriteItemId;
 
-import { Button } from "./ui/button";
-
-export const DeleteModal = ({ roomId }: DeleteModalProps) => {
-  const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const deleteDocumentHandler = async () => {
-    setLoading(true);
-
-    try {
-      await deleteDocument(roomId);
-      setOpen(false);
-    } catch (error) {
-      console.log("Error notif:", error);
-    }
-
-    setLoading(false);
+  const handleBankChange = () => {
+    const newUrl = formUrlQuery({
+      params: searchParams.toString(),
+      key: "id",
+      value: account?.appwriteItemId,
+    });
+    router.push(newUrl, { scroll: false });
   };
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button className="min-w-9 rounded-xl bg-transparent p-2 transition-all">
-          <Image
-            src="/assets/icons/delete.svg"
-            alt="delete"
-            width={20}
-            height={20}
-            className="mt-1"
-          />
-        </Button>
-      </DialogTrigger>
-      <DialogContent className="shad-dialog">
-        <DialogHeader>
-          <Image
-            src="/assets/icons/delete-modal.svg"
-            alt="delete"
-            width={48}
-            height={48}
-            className="mb-4"
-          />
-          <DialogTitle>Delete document</DialogTitle>
-          <DialogDescription>
-            Are you sure you want to delete this document? This action cannot be
-            undone.
-          </DialogDescription>
-        </DialogHeader>
-
-        <DialogFooter className="mt-5">
-          <DialogClose asChild className="w-full bg-dark-400 text-white">
-            Cancel
-          </DialogClose>
-
-          <Button
-            variant="destructive"
-            onClick={deleteDocumentHandler}
-            className="gradient-red w-full"
-          >
-            {loading ? "Deleting..." : "Delete"}
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+    <div
+      onClick={handleBankChange}
+      className={cn(`banktab-item`, {
+        " border-blue-600": isActive,
+      })}
+    >
+      <p
+        className={cn(`text-16 line-clamp-1 flex-1 font-medium text-gray-500`, {
+          " text-blue-600": isActive,
+        })}
+      >
+        {account.name}
+      </p>
+    </div>
   );
 };
 ```
@@ -1076,120 +989,625 @@ export const DeleteModal = ({ roomId }: DeleteModalProps) => {
 </details>
 
 <details>
-<summary><code>components/Notifications.ts</code></summary>
+<summary><code>BankInfo.tsx</code></summary>
 
 ```typescript
 "use client";
 
-import {
-  useInboxNotifications,
-  useUnreadInboxNotificationsCount,
-} from "@liveblocks/react/suspense";
-import {
-  InboxNotification,
-  InboxNotificationList,
-  LiveblocksUIConfig,
-} from "@liveblocks/react-ui";
 import Image from "next/image";
-import { ReactNode } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+  cn,
+  formUrlQuery,
+  formatAmount,
+  getAccountTypeColors,
+} from "@/lib/utils";
 
-export const Notifications = () => {
-  const { inboxNotifications } = useInboxNotifications();
-  const { count } = useUnreadInboxNotificationsCount();
+const BankInfo = ({ account, appwriteItemId, type }: BankInfoProps) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  const unreadNotifications = inboxNotifications.filter(
-    (notification) => !notification.readAt // Filter unread notifications
-  );
+  const isActive = appwriteItemId === account?.appwriteItemId;
+
+  const handleBankChange = () => {
+    const newUrl = formUrlQuery({
+      params: searchParams.toString(),
+      key: "id",
+      value: account?.appwriteItemId,
+    });
+    router.push(newUrl, { scroll: false });
+  };
+
+  const colors = getAccountTypeColors(account?.type as AccountTypes);
 
   return (
-    <Popover>
-      <PopoverTrigger className="relative flex size-10 items-center justify-center rounded-lg">
+    <div
+      onClick={handleBankChange}
+      className={cn(`bank-info ${colors.bg}`, {
+        "shadow-sm border-blue-700": type === "card" && isActive,
+        "rounded-xl": type === "card",
+        "hover:shadow-sm cursor-pointer": type === "card",
+      })}
+    >
+      <figure
+        className={`flex-center h-fit rounded-full bg-blue-100 ${colors.lightBg}`}
+      >
         <Image
-          src="/assets/icons/bell.svg"
-          alt="inbox"
-          width={24}
-          height={24}
+          src="/icons/connect-bank.svg"
+          width={20}
+          height={20}
+          alt={account.subtype}
+          className="m-2 min-w-5"
         />
-        {count > 0 && (
-          <div className="absolute right-2 top-2 z-20 size-2 rounded-full bg-blue-500" />
-        )}
-      </PopoverTrigger>
-      <PopoverContent align="end" className="shad-popover">
-        <LiveblocksUIConfig
-          overrides={{
-            INBOX_NOTIFICATION_TEXT_MENTION: (user: ReactNode) => {
-              return <>{user} mentioned you</>;
-            },
-          }}
+      </figure>
+      <div className="flex w-full flex-1 flex-col justify-center gap-1">
+        <div className="bank-info_content">
+          <h2
+            className={`text-16 line-clamp-1 flex-1 font-bold text-blue-900 ${colors.title}`}
+          >
+            {account.name}
+          </h2>
+          {type === "full" && (
+            <p
+              className={`text-12 rounded-full px-3 py-1 font-medium text-blue-700 ${colors.subText} ${colors.lightBg}`}
+            >
+              {account.subtype}
+            </p>
+          )}
+        </div>
+
+        <p className={`text-16 font-medium text-blue-700 ${colors.subText}`}>
+          {formatAmount(account.currentBalance)}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default BankInfo;
+```
+
+</details>
+
+<details>
+<summary><code>Copy.tsx</code></summary>
+
+```typescript
+"use client";
+import { useState } from "react";
+
+import { Button } from "./ui/button";
+
+const Copy = ({ title }: { title: string }) => {
+  const [hasCopied, setHasCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(title);
+    setHasCopied(true);
+
+    setTimeout(() => {
+      setHasCopied(false);
+    }, 2000);
+  };
+
+  return (
+    <Button
+      data-state="closed"
+      className="mt-3 flex max-w-[320px] gap-4"
+      variant="secondary"
+      onClick={copyToClipboard}
+    >
+      <p className="line-clamp-1 w-full max-w-full text-xs font-medium text-black-2">
+        {title}
+      </p>
+
+      {!hasCopied ? (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          className="mr-2 size-4"
         >
-          <InboxNotificationList>
-            {unreadNotifications.length <= 0 && (
-              <p className="py-2 text-center text-dark-500">
-                No notifications yet
-              </p>
+          <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+          <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+        </svg>
+      ) : (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          className="mr-2 size-4"
+        >
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      )}
+    </Button>
+  );
+};
+
+export default Copy;
+```
+
+</details>
+
+<details>
+<summary><code>PaymentTransferForm.tsx</code></summary>
+
+```typescript
+"use client";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+
+import { createTransfer } from "@/lib/actions/dwolla.actions";
+import { createTransaction } from "@/lib/actions/transaction.actions";
+import { getBank, getBankByAccountId } from "@/lib/actions/user.actions";
+import { decryptId } from "@/lib/utils";
+
+import { BankDropdown } from "./bank/BankDropdown";
+import { Button } from "./ui/button";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "./ui/form";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+
+const formSchema = z.object({
+  email: z.string().email("Invalid email address"),
+  name: z.string().min(4, "Transfer note is too short"),
+  amount: z.string().min(4, "Amount is too short"),
+  senderBank: z.string().min(4, "Please select a valid bank account"),
+  sharableId: z.string().min(8, "Please select a valid sharable Id"),
+});
+
+const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      amount: "",
+      senderBank: "",
+      sharableId: "",
+    },
+  });
+
+  const submit = async (data: z.infer<typeof formSchema>) => {
+    setIsLoading(true);
+
+    try {
+      const receiverAccountId = decryptId(data.sharableId);
+      const receiverBank = await getBankByAccountId({
+        accountId: receiverAccountId,
+      });
+      const senderBank = await getBank({ documentId: data.senderBank });
+
+      const transferParams = {
+        sourceFundingSourceUrl: senderBank.fundingSourceUrl,
+        destinationFundingSourceUrl: receiverBank.fundingSourceUrl,
+        amount: data.amount,
+      };
+      // create transfer
+      const transfer = await createTransfer(transferParams);
+
+      // create transfer transaction
+      if (transfer) {
+        const transaction = {
+          name: data.name,
+          amount: data.amount,
+          senderId: senderBank.userId.$id,
+          senderBankId: senderBank.$id,
+          receiverId: receiverBank.userId.$id,
+          receiverBankId: receiverBank.$id,
+          email: data.email,
+        };
+
+        const newTransaction = await createTransaction(transaction);
+
+        if (newTransaction) {
+          form.reset();
+          router.push("/");
+        }
+      }
+    } catch (error) {
+      console.error("Submitting create transfer request failed: ", error);
+    }
+
+    setIsLoading(false);
+  };
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(submit)} className="flex flex-col">
+        <FormField
+          control={form.control}
+          name="senderBank"
+          render={() => (
+            <FormItem className="border-t border-gray-200">
+              <div className="payment-transfer_form-item pb-6 pt-5">
+                <div className="payment-transfer_form-content">
+                  <FormLabel className="text-14 font-medium text-gray-700">
+                    Select Source Bank
+                  </FormLabel>
+                  <FormDescription className="text-12 font-normal text-gray-600">
+                    Select the bank account you want to transfer funds from
+                  </FormDescription>
+                </div>
+                <div className="flex w-full flex-col">
+                  <FormControl>
+                    <BankDropdown
+                      accounts={accounts}
+                      setValue={form.setValue}
+                      otherStyles="!w-full"
+                    />
+                  </FormControl>
+                  <FormMessage className="text-12 text-red-500" />
+                </div>
+              </div>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem className="border-t border-gray-200">
+              <div className="payment-transfer_form-item pb-6 pt-5">
+                <div className="payment-transfer_form-content">
+                  <FormLabel className="text-14 font-medium text-gray-700">
+                    Transfer Note (Optional)
+                  </FormLabel>
+                  <FormDescription className="text-12 font-normal text-gray-600">
+                    Please provide any additional information or instructions
+                    related to the transfer
+                  </FormDescription>
+                </div>
+                <div className="flex w-full flex-col">
+                  <FormControl>
+                    <Textarea
+                      placeholder="Write a short note here"
+                      className="input-class"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-12 text-red-500" />
+                </div>
+              </div>
+            </FormItem>
+          )}
+        />
+
+        <div className="payment-transfer_form-details">
+          <h2 className="text-18 font-semibold text-gray-900">
+            Bank account details
+          </h2>
+          <p className="text-16 font-normal text-gray-600">
+            Enter the bank account details of the recipient
+          </p>
+        </div>
+
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem className="border-t border-gray-200">
+              <div className="payment-transfer_form-item py-5">
+                <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
+                  Recipient&apos;s Email Address
+                </FormLabel>
+                <div className="flex w-full flex-col">
+                  <FormControl>
+                    <Input
+                      placeholder="ex: johndoe@gmail.com"
+                      className="input-class"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-12 text-red-500" />
+                </div>
+              </div>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="sharableId"
+          render={({ field }) => (
+            <FormItem className="border-t border-gray-200">
+              <div className="payment-transfer_form-item pb-5 pt-6">
+                <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
+                  Receiver&apos;s Plaid Sharable Id
+                </FormLabel>
+                <div className="flex w-full flex-col">
+                  <FormControl>
+                    <Input
+                      placeholder="Enter the public account number"
+                      className="input-class"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-12 text-red-500" />
+                </div>
+              </div>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="amount"
+          render={({ field }) => (
+            <FormItem className="border-y border-gray-200">
+              <div className="payment-transfer_form-item py-5">
+                <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
+                  Amount
+                </FormLabel>
+                <div className="flex w-full flex-col">
+                  <FormControl>
+                    <Input
+                      placeholder="ex: 5.00"
+                      className="input-class"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-12 text-red-500" />
+                </div>
+              </div>
+            </FormItem>
+          )}
+        />
+
+        <div className="payment-transfer_btn-box">
+          <Button type="submit" className="payment-transfer_btn">
+            {isLoading ? (
+              <>
+                <Loader2 size={20} className="animate-spin" /> &nbsp; Sending...
+              </>
+            ) : (
+              "Transfer Funds"
             )}
+          </Button>
+        </div>
+      </form>
+    </Form>
+  );
+};
 
-            {unreadNotifications.length > 0 &&
-              unreadNotifications.map((inboxNotification: any) => (
-                <InboxNotification
-                  key={inboxNotification.id}
-                  inboxNotification={inboxNotification}
-                  className="bg-dark-200 text-white"
-                  href={`/documents/${inboxNotification.roomId}`}
-                  showActions={false}
-                  kinds={{
-                    thread: (props) => (
-                      <InboxNotification.Thread
-                        {...props}
-                        showRoomName={false}
-                        showActions={false}
-                      />
-                    ),
-                    textMention: (props) => {
-                      return (
-                        <InboxNotification.TextMention
-                          {...props}
-                          showRoomName={false}
-                        />
-                      );
-                    },
-                    $documentAccess: (props) => {
-                      const { title, avatar } =
-                        props.inboxNotification.activities[0].data;
+export default PaymentTransferForm;
+```
 
-                      return (
-                        <InboxNotification.Custom
-                          {...props}
-                          title={title}
-                          aside={
-                            <InboxNotification.Icon className="bg-transparent">
-                              <Image
-                                src={(avatar as string) || ""}
-                                width={36}
-                                height={36}
-                                alt="avatar"
-                                className="rounded-full"
-                              />
-                            </InboxNotification.Icon>
-                          }
-                        >
-                          {props.children}
-                        </InboxNotification.Custom>
-                      );
-                    },
-                  }}
-                />
-              ))}
-          </InboxNotificationList>
-        </LiveblocksUIConfig>
-      </PopoverContent>
-    </Popover>
+</details>
+
+<details>
+<summary><code>Missing from the video (top right on the transaction list page) BankDropdown.tsx</code></summary>
+
+```typescript
+"use client";
+
+import Image from "next/image";
+import { useSearchParams, useRouter } from "next/navigation";
+import { useState } from "react";
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+} from "@/components/ui/select";
+import { formUrlQuery, formatAmount } from "@/lib/utils";
+
+export const BankDropdown = ({
+  accounts = [],
+  setValue,
+  otherStyles,
+}: BankDropdownProps) => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [selected, setSeclected] = useState(accounts[0]);
+
+  const handleBankChange = (id: string) => {
+    const account = accounts.find((account) => account.appwriteItemId === id)!;
+
+    setSeclected(account);
+    const newUrl = formUrlQuery({
+      params: searchParams.toString(),
+      key: "id",
+      value: id,
+    });
+    router.push(newUrl, { scroll: false });
+
+    if (setValue) {
+      setValue("senderBank", id);
+    }
+  };
+
+  return (
+    <Select
+      defaultValue={selected.id}
+      onValueChange={(value) => handleBankChange(value)}
+    >
+      <SelectTrigger
+        className={`flex w-full gap-3 md:w-[300px] ${otherStyles}`}
+      >
+        <Image
+          src="icons/credit-card.svg"
+          width={20}
+          height={20}
+          alt="account"
+        />
+        <p className="line-clamp-1 w-full text-left">{selected.name}</p>
+      </SelectTrigger>
+      <SelectContent
+        className={`w-full md:w-[300px] ${otherStyles}`}
+        align="end"
+      >
+        <SelectGroup>
+          <SelectLabel className="py-2 font-normal text-gray-500">
+            Select a bank to display
+          </SelectLabel>
+          {accounts.map((account: Account) => (
+            <SelectItem
+              key={account.id}
+              value={account.appwriteItemId}
+              className="cursor-pointer border-t"
+            >
+              <div className="flex flex-col ">
+                <p className="text-16 font-medium">{account.name}</p>
+                <p className="text-14 font-medium text-blue-600">
+                  {formatAmount(account.currentBalance)}
+                </p>
+              </div>
+            </SelectItem>
+          ))}
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+  );
+};
+```
+  
+</details>
+
+<details>
+<summary><code>Pagination.tsx</code></summary>
+
+```typescript
+"use client";
+
+import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
+
+import { Button } from "@/components/ui/button";
+import { formUrlQuery } from "@/lib/utils";
+
+export const Pagination = ({ page, totalPages }: PaginationProps) => {
+  const router = useRouter();
+  const searchParams = useSearchParams()!;
+
+  const handleNavigation = (type: "prev" | "next") => {
+    const pageNumber = type === "prev" ? page - 1 : page + 1;
+
+    const newUrl = formUrlQuery({
+      params: searchParams.toString(),
+      key: "page",
+      value: pageNumber.toString(),
+    });
+
+    router.push(newUrl, { scroll: false });
+  };
+
+  return (
+    <div className="flex justify-between gap-3">
+      <Button
+        size="lg"
+        variant="ghost"
+        className="p-0 hover:bg-transparent"
+        onClick={() => handleNavigation("prev")}
+        disabled={Number(page) <= 1}
+      >
+        <Image
+          src="/icons/arrow-left.svg"
+          alt="arrow"
+          width={20}
+          height={20}
+          className="mr-2"
+        />
+        Prev
+      </Button>
+      <p className="text-14 flex items-center px-2">
+        {page} / {totalPages}
+      </p>
+      <Button
+        size="lg"
+        variant="ghost"
+        className="p-0 hover:bg-transparent"
+        onClick={() => handleNavigation("next")}
+        disabled={Number(page) >= totalPages}
+      >
+        Next
+        <Image
+          src="/icons/arrow-left.svg"
+          alt="arrow"
+          width={20}
+          height={20}
+          className="ml-2 -scale-x-100"
+        />
+      </Button>
+    </div>
+  );
+};
+```
+
+</details>
+
+<details>
+<summary><code>Category.tsx</code></summary>
+
+```typescript
+import Image from "next/image";
+
+import { topCategoryStyles } from "@/constants";
+import { cn } from "@/lib/utils";
+
+import { Progress } from "./ui/progress";
+
+export const Category = ({ category }: CategoryProps) => {
+  const {
+    bg,
+    circleBg,
+    text: { main, count },
+    progress: { bg: progressBg, indicator },
+    icon,
+  } = topCategoryStyles[category.name as keyof typeof topCategoryStyles] ||
+  topCategoryStyles.default;
+
+  return (
+    <div className={cn("gap-[18px] flex p-4 rounded-xl", bg)}>
+      <figure className={cn("flex-center size-10 rounded-full", circleBg)}>
+        <Image src={icon} width={20} height={20} alt={category.name} />
+      </figure>
+      <div className="flex w-full flex-1 flex-col gap-2">
+        <div className="text-14 flex justify-between">
+          <h2 className={cn("font-medium", main)}>{category.name}</h2>
+          <h3 className={cn("font-normal", count)}>{category.count}</h3>
+        </div>
+        <Progress
+          value={(category.count / category.totalCount) * 100}
+          className={cn("h-2 w-full", progressBg)}
+          indicatorClassName={cn("h-2 w-full", indicator)}
+        />
+      </div>
+    </div>
   );
 };
 ```
@@ -1198,8 +1616,7 @@ export const Notifications = () => {
 
 ## <a name="links">🔗 Links</a>
 
-- Public assets used in the project can be found [here](https://drive.google.com/file/d/1MCQaP-imgDdopwcUn4CN_D-WglDc--Ho/view?usp=sharing)
-- [Liveblocks Starter Guide](https://liveblocks.io/docs/get-started/nextjs-lexical)
+Assets used in the project can be found [here](https://drive.google.com/file/d/1TVhdnD97LajGsyaiNa6sDs-ap-z1oerA/view?usp=sharing)
 
 ## <a name="more">🚀 More</a>
 
