@@ -4,3 +4,8 @@ declare interface HeaderBoxProps {
     subtext: string;
     user?: string;
   }
+
+  declare interface FooterProps {
+    user: User;
+    type?: 'mobile' | 'desktop'
+  }

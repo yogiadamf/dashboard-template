@@ -5,13 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
+import Footer from "./Footer";
 
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <section className="sidebar">
-      <nav className="flex flex-col gap-4">
-        <Link href="/" className="mb-12 cursor-pointer flex items-center gap-2">
+    <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px]">
+      <nav className="flex flex-col gap-3">
+        <Link href="/" className="mb-2 cursor-pointer flex items-center gap-2">
           <Image
             src="/icons/logo.svg"
             width={34}
@@ -19,19 +20,23 @@ const Sidebar = () => {
             alt="Horizon logo"
             className="size-[24px] max-xl:size-14"
           />
-          <h1 className="sidebar-logo">Horizon</h1>
+          <h1 className="2xl:text-24 text-[20px] font-bold text-black-1 max-xl:hidden">
+            Main
+          </h1>
         </Link>
         {sidebarLinks.map((item) => {
           const isActive =
             pathname === item.route || pathname.startsWith(`${item.route}/`);
-
           return (
             <Link
               href={item.route}
               key={item.label}
-              className={cn("sidebar-link", { "bg-bank-gradient": isActive })}
+              className={cn(
+                "flex gap-2 items-center py-2 pl-3 rounded-lg justify-center xl:justify-start",
+                { "bg-primary": isActive }
+              )}
             >
-              <div className="relative size-6">
+              <div className="relative size-5">
                 <Image
                   src={item.imgURL}
                   alt={item.label}
@@ -41,13 +46,23 @@ const Sidebar = () => {
                   })}
                 />
               </div>
-              <p className={cn("sidebar-label", { "!text-white": isActive })}>
+              <p
+                className={`text-14 font-semibold ${
+                  isActive ? "!text-white" : "text-black-2"
+                } max-xl:hidden`}
+              >
                 {item.label}
               </p>
             </Link>
           );
         })}
       </nav>
+      <Footer
+        user={{
+          username: "admin",
+          email: "admin@email.com",
+        }}
+      />
     </section>
   );
 };
